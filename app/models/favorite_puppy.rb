@@ -1,4 +1,4 @@
-class Favorite < ApplicationRecord
+class FavoritePuppy < ApplicationRecord
   belongs_to :user
   belongs_to :puppies
 end
