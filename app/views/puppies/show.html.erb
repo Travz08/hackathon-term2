@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @puppy.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @puppy.age %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @puppy.breed %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @puppy.size %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @puppy.gender %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @puppy.bio %>
+</p>
+
+<p>
+  <strong>Desexed:</strong>
+  <%= @puppy.desexed %>
+</p>
+
+<p>
+  <strong>Vaccinated:</strong>
+  <%= @puppy.vaccinated %>
+</p>
+
+<p>
+  <strong>Adoption fee:</strong>
+  <%= @puppy.adoption_fee %>
+</p>
+
+<%= link_to 'Edit', edit_puppy_path(@puppy) %> |
+<%= link_to 'Back', puppies_path %>
