@@ -1,0 +1,30 @@
+@import "bootstrap";
+
+// Images
+
+.banner {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 10%;
+}
+
+// Navbar
+
+.text-black {
+  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  color: #000;
+}
+
+// Text
+
+.text-white {
+  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  color: white;
+}
+
+a:hover{
+  color: #6B2A7E;
+}

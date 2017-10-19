@@ -1,0 +1,67 @@
+<%= form_with(model: puppy, local: true) do |form| %>
+  <% if puppy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(puppy.errors.count, "error") %> prohibited this puppy from being saved:</h2>
+
+      <ul>
+      <% puppy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :puppy_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :puppy_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age, id: :puppy_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed, id: :puppy_breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size, id: :puppy_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :puppy_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :puppy_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desexed %>
+    <%= form.check_box :desexed, id: :puppy_desexed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vaccinated %>
+    <%= form.check_box :vaccinated, id: :puppy_vaccinated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adoption_fee %>
+    <%= form.number_field :adoption_fee, id: :puppy_adoption_fee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
