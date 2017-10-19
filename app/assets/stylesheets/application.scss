@@ -1,0 +1,79 @@
+@import "bootstrap";
+
+// General
+
+.center {
+  text-align: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// Images
+
+.banner {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.banner-wrap {
+  display:inline-block;
+  position:relative;
+}
+
+.logo {
+  width: 20%;
+}
+
+// Navbar
+
+.text-black {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #000;
+  font-size: 20px;
+}
+
+.navbar-default {
+  background-color: #fff;
+}
+
+// Text
+
+.text-white {
+  font-family: 'Didact Gothic', sans-serif;
+  color: white;
+}
+
+a:hover{
+  color: #6B2A7E;
+  text-decoration: none;
+}
+
+// Buttons
+
+.btn {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  background: #6B2A7E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover, .btn-browse:hover {
+  background: #A470B2;
+  text-decoration: none;
+  cursor: pointer; cursor: hand;
+}
+
+.btn-browse {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  background: #6B2A7E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position:absolute;
+  bottom:60px;
+  right:30px;
+}

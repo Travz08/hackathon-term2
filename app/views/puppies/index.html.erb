@@ -1,0 +1,48 @@
+<div class="container">
+<div class="row">
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-2">
+  SEARCH</br>
+  Inserting Search Section here
+<!-- James to insert Search here -->
+  <!-- <div class="form-group"> -->
+    <%#= f.text_field :breed, autofocus: true, placeholder: "Enter Breed", class: "form-control" %>
+</div>
+
+<div class="col-md-10">
+    <div class="row center">
+      <p><h1>AVAILABLE DOGS<h1></p>
+      </br>
+    </div>
+    <div class="row center">
+    <% @puppies.each do |puppy| %>
+      <div class="col-md-5">
+      <div class="card">
+      <%#= link to image_tag('puppy.image_url'), puppy %>
+      <div class="card-body">
+        <h4 class="card-title center"><%= puppy.name %></h4>
+        <p class="text-black center">
+          Age: <%= puppy.age %>
+          </br>
+          Gender: <%= puppy.gender %>
+          </br>
+          Breed: <%= puppy.breed %>
+          </br></br>
+          <a href="#" class="btn center">ENQUIRE</a>
+          </br>
+      </div>
+      </div>
+      </div>
+    <% end %>
+    </div>
+
+          <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
+          <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
+          <%#= link_to 'Edit', edit_puppy_path(puppy) %>
+          <%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <br>
+
+</div>
+</div>
+<%= link_to 'New Puppy', new_puppy_path %>
