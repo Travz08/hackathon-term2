@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171019042528) do
+=======
+ActiveRecord::Schema.define(version: 20171019023339) do
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
 
   create_table "favorite_puppies", force: :cascade do |t|
     t.integer "user_id"
@@ -49,7 +53,10 @@ ActiveRecord::Schema.define(version: 20171019042528) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.boolean "admin"
+=======
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

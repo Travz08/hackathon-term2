@@ -37,6 +37,27 @@ class PuppiesController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
+=======
+  # Add and remove favorite puppies
+  # for current_user
+  def favorite
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorites << @puppy
+      redirect_to :back, notice: 'You favorited #{@puppy.name}'
+
+    elsif type == "unfavorite"
+      current_user.favorites.delete(@puppy)
+      redirect_to :back, notice: 'Unfavorited #{@puppy.name}'
+
+    else
+      # Type missing, nothing happens
+      redirect_to :back, notice: 'Nothing happened.'
+    end
+  end
+
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
   # PATCH/PUT /puppies/1
   # PATCH/PUT /puppies/1.json
   def update
@@ -69,6 +90,10 @@ class PuppiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def puppy_params
+<<<<<<< HEAD
       params.require(:puppy).permit(:name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
+=======
+      params.require(:puppy).permit(:image, :name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     end
 end
