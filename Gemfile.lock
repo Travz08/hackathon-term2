@@ -44,6 +44,10 @@ GEM
     autoprefixer-rails (7.1.4.1)
       execjs
     bcrypt (3.1.11)
+<<<<<<< HEAD
+=======
+    bcrypt (3.1.11-x86-mingw32)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     bindex (0.5.0)
     bootstrap (4.0.0.beta)
       autoprefixer-rails (>= 6.0.3)
@@ -79,6 +83,10 @@ GEM
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+<<<<<<< HEAD
+=======
+    ffi (1.9.18-x86-mingw32)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -107,6 +115,11 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+<<<<<<< HEAD
+=======
+    nokogiri (1.8.1-x86-mingw32)
+      mini_portile2 (~> 2.3.0)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     orm_adapter (0.5.0)
     popper_js (1.11.1)
     public_suffix (3.0.0)
@@ -175,6 +188,10 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+<<<<<<< HEAD
+=======
+    sqlite3 (1.3.13-x86-mingw32)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -183,10 +200,19 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+<<<<<<< HEAD
+=======
+    tzinfo-data (1.2017.2)
+      tzinfo (>= 1.0.0)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
+<<<<<<< HEAD
+=======
+    wdm (0.1.1)
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -200,6 +226,10 @@ GEM
 
 PLATFORMS
   ruby
+<<<<<<< HEAD
+=======
+  x86-mingw32
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.beta)
@@ -221,7 +251,15 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+<<<<<<< HEAD
   web-console (>= 3.3.0)
 
 BUNDLED WITH
    1.15.4
+=======
+  wdm (>= 0.1.0)
+  web-console (>= 3.3.0)
+
+BUNDLED WITH
+   1.16.0.pre.3
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
