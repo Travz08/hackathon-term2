@@ -1,6 +1,13 @@
 @import "bootstrap";
-<<<<<<< HEAD
-=======
+
+// General
+
+.center {
+  text-align: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 // Images
 
@@ -11,23 +18,65 @@
 
 .logo {
   width: 10%;
+
+.banner-wrap {
+  display:inline-block;
+  position:relative;
+}
+
+.logo {
+  width: 20%;
 }
 
 // Navbar
 
 .text-black {
-  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   color: #000;
+  font-size: 20px;
+}
+
+.navbar-default {
+  background-color: #fff;
 }
 
 // Text
 
 .text-white {
-  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   color: white;
 }
 
 a:hover{
   color: #6B2A7E;
+  text-decoration: none;
 }
->>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
+
+// Buttons
+
+.btn {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  background: #6B2A7E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover, .btn-browse:hover {
+  background: #A470B2;
+  text-decoration: none;
+  cursor: pointer; cursor: hand;
+}
+
+.btn-browse {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  background: #6B2A7E;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position:absolute;
+  bottom:60px;
+  right:30px;
+}

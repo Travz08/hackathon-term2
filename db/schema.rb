@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171019042528) do
 
-
   create_table "favorite_puppies", force: :cascade do |t|
     t.integer "user_id"
     t.integer "puppy_id"
@@ -54,5 +53,4 @@ ActiveRecord::Schema.define(version: 20171019042528) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 end
