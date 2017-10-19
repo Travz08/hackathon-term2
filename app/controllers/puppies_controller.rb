@@ -5,6 +5,13 @@ class PuppiesController < ApplicationController
   # GET /puppies.json
   def index
     @puppies = Puppy.all
+
+    # adding conditions to find puppies if given search params
+    if params[:search]
+      @puppies = Puppy.search(params[:search]).order("created_at DESC")
+    else
+      @puppies = Puppy.all.order('created_at DESC')
+    end
   end
 
   # GET /puppies/1
