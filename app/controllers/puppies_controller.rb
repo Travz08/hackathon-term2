@@ -37,6 +37,24 @@ class PuppiesController < ApplicationController
     end
   end
 
+  # Add and remove favorite puppies
+  # for current_user
+  def favorite
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorites << @puppy
+      redirect_to :back, notice: 'You favorited #{@puppy.name}'
+
+    elsif type == "unfavorite"
+      current_user.favorites.delete(@puppy)
+      redirect_to :back, notice: 'Unfavorited #{@puppy.name}'
+
+    else
+      # Type missing, nothing happens
+      redirect_to :back, notice: 'Nothing happened.'
+    end
+  end
+
   # PATCH/PUT /puppies/1
   # PATCH/PUT /puppies/1.json
   def update
@@ -69,6 +87,6 @@ class PuppiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def puppy_params
-      params.require(:puppy).permit(:name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
+      params.require(:puppy).permit(:image, :name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
     end
 end

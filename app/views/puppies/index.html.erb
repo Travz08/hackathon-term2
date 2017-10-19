@@ -5,15 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Picture</th>
+      <th>ID #</th>
       <th>Name</th>
       <th>Age</th>
       <th>Breed</th>
-      <th>Size</th>
-      <th>Gender</th>
-      <th>Bio</th>
-      <th>Desexed</th>
-      <th>Vaccinated</th>
-      <th>Adoption fee</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,15 +17,13 @@
   <tbody>
     <% @puppies.each do |puppy| %>
       <tr>
+        <td><%= image_tag puppy.image_url %></td>
+        <td><%= puppy.id %></td>
         <td><%= puppy.name %></td>
         <td><%= puppy.age %></td>
         <td><%= puppy.breed %></td>
-        <td><%= puppy.size %></td>
-        <td><%= puppy.gender %></td>
-        <td><%= puppy.bio %></td>
-        <td><%= puppy.desexed %></td>
-        <td><%= puppy.vaccinated %></td>
-        <td><%= puppy.adoption_fee %></td>
+        <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
+        <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
         <td><%= link_to 'Show', puppy %></td>
         <td><%= link_to 'Edit', edit_puppy_path(puppy) %></td>
         <td><%= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
