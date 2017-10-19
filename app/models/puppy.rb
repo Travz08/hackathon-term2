@@ -1,5 +1,6 @@
 class Puppy < ApplicationRecord
-  belongs_to :user
+  include ImageUploader[:image]
+  # belongs_to :user
 
   # Favorited by users
   has_many :favorite_puppies # just the 'relationships'
