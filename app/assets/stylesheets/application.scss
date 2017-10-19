@@ -1,1 +1,33 @@
 @import "bootstrap";
+<<<<<<< HEAD
+=======
+
+// Images
+
+.banner {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 10%;
+}
+
+// Navbar
+
+.text-black {
+  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  color: #000;
+}
+
+// Text
+
+.text-white {
+  font-family: "Valera Round", "Helvetica New", "Helvetica", "Arial", sans-serif;
+  color: white;
+}
+
+a:hover{
+  color: #6B2A7E;
+}
+>>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
