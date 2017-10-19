@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   end
   root :to => 'home#index'
   resources :puppies
+
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
   get 'home/favorite'
 
   devise_for :users
+
 
   resources :puppies do
     put :favorite, on: :member

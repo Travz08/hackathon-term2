@@ -54,7 +54,6 @@
 <table>
   <thead>
     <tr>
-<<<<<<< HEAD
       <th>Name</th>
       <th>Age</th>
       <th>Breed</th>
@@ -64,13 +63,12 @@
       <th>Desexed</th>
       <th>Vaccinated</th>
       <th>Adoption fee</th>
-=======
+
       <th>Picture</th>
       <th>ID #</th>
       <th>Name</th>
       <th>Age</th>
       <th>Breed</th>
->>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -78,7 +76,6 @@
   <tbody>
     <% @puppies.each do |puppy| %>
       <tr>
-<<<<<<< HEAD
         <td><%= puppy.name %></td>
         <td><%= puppy.age %></td>
         <td><%= puppy.breed %></td>
@@ -88,7 +85,7 @@
         <td><%= puppy.desexed %></td>
         <td><%= puppy.vaccinated %></td>
         <td><%= puppy.adoption_fee %></td>
-=======
+
         <td><%= image_tag puppy.image_url %></td>
         <td><%= puppy.id %></td>
         <td><%= puppy.name %></td>
@@ -96,7 +93,6 @@
         <td><%= puppy.breed %></td>
         <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
         <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
->>>>>>> 48ea7b2... added css and homepage image, edited navbar, created home controller
         <td><%= link_to 'Show', puppy %></td>
         <td><%= link_to 'Edit', edit_puppy_path(puppy) %></td>
         <td><%= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
