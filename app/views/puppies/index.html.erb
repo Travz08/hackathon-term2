@@ -40,7 +40,13 @@
       </div>
       </div>
     <% end %>
-    <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+
+    <% if current_user.email == 'admin@pawesome.com' %>
+        <div>
+        <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+        </div>
+    <% else %>
+    <% end %>
   </div>
           <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
           <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
