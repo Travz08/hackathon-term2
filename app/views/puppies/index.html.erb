@@ -1,27 +1,29 @@
 <div class="container">
 <div class="row">
 
-<div class="col-md-2">
+<div class="col-md-3">
+  <div class="row center">
   <h3>Find a pup</h3></br>
-  <div class="">
+  </div>
+  <div class="row center">
     <!--Breed Tag  -->
-      <%= form_tag(puppies_path, :method => "get", id:"search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Find a pup" %>
-      <%= submit_tag "Search" %>
+      <%= form_tag(puppies_path, :method => "get") do %>
+      <br><%= text_field_tag :search, params[:search], placeholder: "Enter search terms e.g. breed."%></br>
+      <br><%= submit_tag "SEARCH", class: 'btn' %></br>
       <% end %>
   </div>
-
 </div>
 
-<div class="col-md-10">
+<div class="col-md-9">
     <div class="row center">
       <p><h1>AVAILABLE DOGS<h1></p>
       </br>
     </div>
     <div class="row center">
     <% @puppies.each do |puppy| %>
-      <div class="col-md-5">
+      <div class="col-md-6">
       <div class="card">
+      </br>
       <%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
       <div class="card-body">
         <h4 class="card-title center"><%= puppy.name %></h4>

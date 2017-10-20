@@ -1,53 +1,46 @@
 <div class="container">
-
-<div><%= image_tag @puppy.image_url %></div>
-
-<p>
+<div class="row center">
+<h2 class="center"> Dog Profile </h2>
+<div><%= image_tag @puppy.image_url, class: 'profile' %></div>
+</br>
+</div>
+<div class="row center text-black">
   <strong>Name:</strong>
   <%= @puppy.name %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @puppy.age %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
+  <strong>Age: </strong>
+  <%= @puppy.age %></p>
+</div>
+<div class="row center text-black">
   <strong>Breed:</strong>
   <%= @puppy.breed %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Size:</strong>
   <%= @puppy.size %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Gender:</strong>
   <%= @puppy.gender %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Bio:</strong>
   <%= @puppy.bio %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Desexed:</strong>
   <%= @puppy.desexed %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Vaccinated:</strong>
   <%= @puppy.vaccinated %>
-</p>
-
-<p>
+</div>
+<div class="row center text-black">
   <strong>Adoption fee:</strong>
-  <%= @puppy.adoption_fee %>
-</p>
+  $<%= @puppy.adoption_fee %>
+</div>
 
 <%= link_to 'Edit', edit_puppy_path(@puppy) %> |
 <%= link_to 'Back', puppies_path %>
-
 </div>
