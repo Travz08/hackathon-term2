@@ -36,31 +36,41 @@
 			<!-- < link_to image_tag("blackpaw.jpg"), favorite_puppy_path(puppy, type: "unfavorite"), method: :patch, class: "logo"%>
 			< end %> --> -->
 
-			<div class="card-body">
-				<h4 class="card-title center"><%= puppy.name %></h4>
-				<p class="text-black center">
-					Age:
-					<%= puppy.age %>
-				</br>
-				Gender:
-				<%= puppy.gender %>
-			</br>
-			Breed:
-			<%= puppy.breed %>
-		</br>
-	</br>
-	<a href="#" class="btn center">ENQUIRE</a>
-</br>
-</div>
-</div>
-</div>
-<% end %>
-<%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
-</div>
-<!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
-          <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
-<%#= link_to 'Edit', edit_puppy_path(puppy) %>
-<%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="col-md-9">
+    <div class="row center">
+      <p><h2>AVAILABLE DOGS</h2></p>
+      </br>
+    </div>
+    <div class="row center">
+    <% @puppies.each do |puppy| %>
+      <div class="col-md-6">
+      <div class="card">
+      </br>
+      <%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
+      <div class="card-body">
+        <h4 class="card-title center"><%= puppy.name %></h4>
+        <p class="text-black center">
+          Age: <%= puppy.age %>
+          </br>
+          Gender: <%= puppy.gender %>
+          </br>
+          Breed: <%= puppy.breed %>
+          </br></br>
+          <a href="#" class="btn center">ENQUIRE</a>
+          </br>
+      </div>
+      </div>
+      </div>
+    <% end %>
+
+    <% if current_user.email == 'admin@pawesome.com' %>
+        <div>
+        <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+        </div>
+    <% else %>
+    <% end %>
+  </div>
+         
 </div>
 </div>
 </div>
