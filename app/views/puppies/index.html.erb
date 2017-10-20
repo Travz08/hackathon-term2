@@ -6,7 +6,7 @@
   <div class="">
     <!--Breed Tag  -->
       <%= form_tag(puppies_path, :method => "get", id:"search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "find a pup" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Find a pup" %>
       <%= submit_tag "Search" %>
       <% end %>
   </div>
@@ -22,7 +22,7 @@
     <% @puppies.each do |puppy| %>
       <div class="col-md-5">
       <div class="card">
-      <%= link to image_tag('puppy.image_url'), puppy %>
+      <%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
       <div class="card-body">
         <h4 class="card-title center"><%= puppy.name %></h4>
         <p class="text-black center">
