@@ -1,3 +1,4 @@
+# Rubo cop needs a comment here
 class CreateFavoritePuppies < ActiveRecord::Migration[5.1]
   def change
     create_table :favorite_puppies do |t|

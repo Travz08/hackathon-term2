@@ -1,6 +1,7 @@
 require "cloudinary"
 require "shrine/storage/cloudinary"
 
+
 Cloudinary.config(
   cloud_name: "dt8rlngsi",
   api_key:    "947235153734762",

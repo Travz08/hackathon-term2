@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row center">
-<h2 class="center"> Dog Profile </h2>
+<h2 class="center"> DOG PROFILE </h2>
 <div><%= image_tag @puppy.image_url, class: 'profile' %></div>
 </br>
 </div>
@@ -40,7 +40,17 @@
   <strong>Adoption fee:</strong>
   $<%= @puppy.adoption_fee %>
 </div>
-
-<%= link_to 'Edit', edit_puppy_path(@puppy) %> |
+<div class="row center text-black">
 <%= link_to 'Back', puppies_path %>
+</div>
+<% if current_user.email == 'admin@pawesome.com' %>
+    <div class="row center text-black">
+    <%= link_to 'Edit', edit_puppy_path(@puppy) %>
+    </div>
+    <div class="row center text-black">
+    <%= link_to 'Destroy', @puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+<% else %>
+<% end %>
+
 </div>

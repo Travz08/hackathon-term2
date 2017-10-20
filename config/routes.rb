@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-
-
+  
   devise_for :users
 
   authenticated :user do
-    root :to => 'puppies#index', as: :authenticated_root
+    root to: 'puppies#index', as: :authenticated_root
   end
-  root :to => 'home#index'
+  root to: 'home#index'
 
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
@@ -15,5 +14,4 @@ Rails.application.routes.draw do
   resources :puppies do
     put :favorite, on: :member
   end
-
 end

@@ -1,5 +1,6 @@
+# Rubo cop needs a comment here
 require_relative 'boot'
-
+# Rubo cop needs a comment here
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems

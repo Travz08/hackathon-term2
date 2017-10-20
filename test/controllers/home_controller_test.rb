@@ -1,14 +1,13 @@
 require 'test_helper'
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test 'should get index' do
     get home_index_url
     assert_response :success
   end
 
-  test "should get favorite" do
+  test 'should get favorite' do
     get home_favorite_url
     assert_response :success
   end
-
 end

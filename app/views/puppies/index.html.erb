@@ -3,7 +3,7 @@
 
 <div class="col-md-3">
   <div class="row center">
-  <h3>Find a pup</h3></br>
+  <h2>FIND A PUP</h2></br>
   </div>
   <div class="row center">
     <!--Breed Tag  -->
@@ -16,7 +16,7 @@
 
 <div class="col-md-9">
     <div class="row center">
-      <p><h1>AVAILABLE DOGS<h1></p>
+      <p><h2>AVAILABLE DOGS</h2></p>
       </br>
     </div>
     <div class="row center">
@@ -40,15 +40,18 @@
       </div>
       </div>
     <% end %>
-    </div>
 
+    <% if current_user.email == 'admin@pawesome.com' %>
+        <div>
+        <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+        </div>
+    <% else %>
+    <% end %>
+  </div>
           <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
           <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
           <%#= link_to 'Edit', edit_puppy_path(puppy) %>
           <%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <br>
-
 </div>
 </div>
-
-<%= link_to 'New Puppy', new_puppy_path %>
+</div>
