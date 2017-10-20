@@ -41,15 +41,15 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (7.1.4.1)
+    ast (2.3.0)
+    autoprefixer-rails (7.1.5)
       execjs
     bcrypt (3.1.11)
-    bcrypt (3.1.11-x86-mingw32)
     bindex (0.5.0)
-    bootstrap (4.0.0.beta)
+    bootstrap (4.0.0.beta2)
       autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
+      popper_js (>= 1.12.3, < 2)
+      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -80,11 +80,10 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    down (4.1.0)
+    down (4.1.1)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
-    ffi (1.9.18-x86-mingw32)
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -117,11 +116,13 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    nokogiri (1.8.1-x86-mingw32)
-      mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    parallel (1.12.0)
+    parser (2.4.0.0)
+      ast (~> 2.2)
     pg (0.21.0)
-    popper_js (1.11.1)
+    popper_js (1.12.5)
+    powerpack (0.1.1)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -150,6 +151,8 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.2.2)
+      rake
     rake (12.1.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
@@ -157,6 +160,14 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rubocop (0.51.0)
+      parallel (~> 1.10)
+      parser (>= 2.3.3.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 3.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.2)
@@ -173,7 +184,7 @@ GEM
     selenium-webdriver (3.6.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    shrine (2.7.0)
+    shrine (2.8.0)
       down (~> 4.1)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -188,7 +199,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
-    sqlite3 (1.3.13-x86-mingw32)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -199,13 +209,11 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2017.2)
-      tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.3.0)
     warden (1.2.7)
       rack (>= 1.0)
-    wdm (0.1.1)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -219,7 +227,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.beta)
@@ -235,6 +242,7 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.4)
+  rubocop (~> 0.51.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   shrine
@@ -245,8 +253,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
-  wdm (>= 0.1.0)
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0.pre.2
