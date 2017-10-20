@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 # devise users
 gem 'devise', '~> 4.2'
+# For changing notifications in Devise
+gem 'toastr-rails', '~> 1.0'
 # Jquery
 gem 'jquery-rails'
 # location
@@ -45,9 +47,6 @@ gem 'jbuilder', '~> 2.5'
 
 # For windows devices
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
-# For changing notifications in Devise
-gem 'toastr-rails', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

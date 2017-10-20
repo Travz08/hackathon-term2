@@ -10,10 +10,14 @@
   margin-right: 0;
 }
 
+.col {
+  padding: 0px;
+}
+
 // Images
 
 .banner {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -79,11 +83,12 @@ a:hover {
 .btn-browse {
   font-family: 'Didact Gothic', sans-serif;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 30px;
   background: #6B2A7E;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   position: absolute;
   bottom: 60px;
-  right: 30px;
+  right: 150px;
+  width: 30%;
 }
