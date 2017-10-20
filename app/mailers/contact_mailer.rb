@@ -5,7 +5,7 @@ class ContactMailer < ApplicationMailer
     @email = email
     @contact_name = contact_name
     @message = message
-    mail(to: 'traviskelekolio@yahoo.com', subject: 'Contact Us!')
+    mail(to: 'pawesome.puppers@gmail.com', subject: 'Contact Us')
   end
 
 end
