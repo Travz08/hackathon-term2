@@ -15,7 +15,7 @@ We used Robucop as a code analysis tool. [James to explain.] Ruby conventions su
 ## Feature development and use of Ruby gems / APIs
 The following gems were used:
 Gem			                    | Purpose
-----------------------------| ------------------------------------------------
+                            | 
 Devise (~> 4.2)	          	| For Sign Up / Login / Logout
 toastr-rails (~> 1.0)     	| For changing alerts/success messages to pop ups
 jquery-rails		            | For use with toastr-rails
