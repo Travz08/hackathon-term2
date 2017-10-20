@@ -82,12 +82,10 @@ The following APIs were used:
 [to be inserted]
 
 ## Design & Planning
-We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD .
-
-travz08 
+We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD, which is found here:
 https://dbdesigner.net/designer/schema/120394
 
- Wireframes of the design are found
+ Wireframes of the design are found here:
 
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
