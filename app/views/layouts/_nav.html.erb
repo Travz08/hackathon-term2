@@ -7,8 +7,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Note to Travis: this nav bar is set so that when you are not logged in, it shows the Login/Sign Up links. When you are logged in, it will show the heart symbol, the inbox symbol, and the profile and logout symbol. Feel free to replace with yours - maybe keep the navbar formatting though -->
-
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
       <li class= "nav-item"><%= link_to "About", about_path, class: 'text-black nav-link' %></li>
@@ -24,8 +22,10 @@
         </div>
     <% else %>
       <ul class="navbar-nav ml-auto">
+
         <li><%= link_to image_tag('heart.svg'), favorite_puppy_path(current_user) %></li>
         <!-- <li><= link_to image_tag('inbox.svg'), message_path %></li> -->
+
         <li><%= link_to image_tag('profile.svg'), edit_user_registration_path %></li>
         <li><%= link_to image_tag('logout.svg'), destroy_user_session_path, method: :delete %></li>
           </ul>
