@@ -49,11 +49,11 @@ class PuppiesController < ApplicationController
     type = params[:type]
     if type == 'favorite'
       current_user.favorites << @puppy
-      redirect_to :back, notice: "You favorited #{@puppy.name}"
+      # redirect_to :root, notice: "You favorited #{@puppy.name}"
 
     elsif type == 'unfavorite'
       current_user.favorites.delete(@puppy)
-      redirect_to :back, notice: "Unfavorited #{@puppy.name}"
+      # redirect_to :back, notice: "Unfavorited #{@puppy.name}"
 
     else
       # Type missing, nothing happens

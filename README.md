@@ -59,9 +59,6 @@ continue until you have none left and integrate this into your regular test suit
 
 
 
-
-Ruby conventions such as [insert] were followed.
-
 ## Feature development and use of Ruby gems / APIs
 The following gems were used:
 ```
@@ -86,7 +83,8 @@ The following APIs were used:
 [to be inserted]
 
 ## Design & Planning
-We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD [Travis to insert]. Wireframes of the design are found here [James to insert].
+We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD . Wireframes of the design are found
+https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
 Our web application was deployed using Heroku, and can be found here [Travis to insert].
@@ -102,8 +100,6 @@ All team members worked together in order to resolve issues (discussed below).
 The key issue encountered by the team involved using Git. An early mistake was the creation of multiple, unnecessary branches despite having a small, agile team. This was done because it was believed that each branch should reflect a category of work (i.e. design, admin, user, and puppies), as well as master. Furthermore, one of the branches was unable to merge with any of the others as the history of the branches was radically different, and Github would not allow a merge.
 
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
-
-
 
 
 ## Postgres vs Sqlite3

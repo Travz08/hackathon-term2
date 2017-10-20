@@ -1,51 +1,66 @@
 <div class="container">
-<div class="row">
+	<div class="row">
 
-<div class="col-md-3">
-  <div class="row center">
-  <h2>FIND A PUP</h2></br>
-  </div>
-  <div class="row center">
-    <!--Breed Tag  -->
-      <%= form_tag(puppies_path, :method => "get") do %>
-      <br><%= text_field_tag :search, params[:search], placeholder: "      Find a Pawmate"%></br>
-      <br><%= submit_tag "SEARCH", class: 'btn' %></br>
-      <% end %>
-  </div>
+		<div class="col-md-3">
+			<div class="row center">
+				<h2>FIND A PUP</h2>
+			</br>
+		</div>
+		<div class="row center">
+			<!--Breed Tag  -->
+			<%= form_tag(puppies_path, :method => "get") do %>
+			<br><%= text_field_tag :search, params[:search], placeholder: "      Find a Pawmate"%></br>
+			<br><%= submit_tag "SEARCH", class: 'btn' %></br>
+			<% end %>
+		</div>
+	</div>
+
+	<div class="col-md-9">
+		<div class="row center">
+			<p>
+				<h2>AVAILABLE DOGS</h2>
+			</p>
+		</br>
+	</div>
+	<div class="row center">
+		<% @puppies.each do |puppy| %>
+		<div class="col-md-6">
+			<div class="card"></br>
+			<!-- Dog image   -->
+			<%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
+
+			<!--  favourite paw  -->
+			 <!-- if current_user %>
+			< link_to image_tag("whitepaw.jpg"), favorite_puppy_path(puppy, type: "favorite"), method: :put, class: "logo" %>
+      <!- unfavorite -->
+			<!-- < link_to image_tag("blackpaw.jpg"), favorite_puppy_path(puppy, type: "unfavorite"), method: :patch, class: "logo"%>
+			< end %> --> -->
+
+			<div class="card-body">
+				<h4 class="card-title center"><%= puppy.name %></h4>
+				<p class="text-black center">
+					Age:
+					<%= puppy.age %>
+				</br>
+				Gender:
+				<%= puppy.gender %>
+			</br>
+			Breed:
+			<%= puppy.breed %>
+		</br>
+	</br>
+	<a href="#" class="btn center">ENQUIRE</a>
+</br>
 </div>
-
-<div class="col-md-9">
-    <div class="row center">
-      <p><h2>AVAILABLE DOGS</h2></p>
-      </br>
-    </div>
-    <div class="row center">
-    <% @puppies.each do |puppy| %>
-      <div class="col-md-6">
-      <div class="card">
-      </br>
-      <%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
-      <div class="card-body">
-        <h4 class="card-title center"><%= puppy.name %></h4>
-        <p class="text-black center">
-          Age: <%= puppy.age %>
-          </br>
-          Gender: <%= puppy.gender %>
-          </br>
-          Breed: <%= puppy.breed %>
-          </br></br>
-          <a href="#" class="btn center">ENQUIRE</a>
-          </br>
-      </div>
-      </div>
-      </div>
-    <% end %>
-    <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
-  </div>
-          <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
+</div>
+</div>
+<% end %>
+<%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+</div>
+<!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
           <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
-          <%#= link_to 'Edit', edit_puppy_path(puppy) %>
-          <%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%#= link_to 'Edit', edit_puppy_path(puppy) %>
+<%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 </div>
 </div>

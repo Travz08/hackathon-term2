@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/favorite'
+
   devise_for :users
 
   authenticated :user do
