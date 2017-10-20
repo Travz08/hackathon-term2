@@ -2,11 +2,15 @@
 <div class="row">
 
 <div class="col-md-2">
-  SEARCH</br>
-  Inserting Search Section here
-<!-- James to insert Search here -->
-  <!-- <div class="form-group"> -->
-    <%#= f.text_field :breed, autofocus: true, placeholder: "Enter Breed", class: "form-control" %>
+  <h3>Find a pup</h3></br>
+  <div class="">
+    <!--Breed Tag  -->
+      <%= form_tag(puppies_path, :method => "get", id:"search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "find a pup" %>
+      <%= submit_tag "Search" %>
+      <% end %>
+  </div>
+
 </div>
 
 <div class="col-md-10">
@@ -44,4 +48,5 @@
 
 </div>
 </div>
+
 <%= link_to 'New Puppy', new_puppy_path %>
