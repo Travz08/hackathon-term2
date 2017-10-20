@@ -1,5 +1,6 @@
+# This takes care of our puppies project
 class PuppiesController < ApplicationController
-  before_action :set_puppy, only: [:show, :edit, :update, :destroy]
+  before_action :set_puppy, only: %i[show edit update destroy]
 
   # GET /puppies
   # GET /puppies.json
@@ -7,17 +8,16 @@ class PuppiesController < ApplicationController
     @puppies = Puppy.all
 
     # adding conditions to find puppies if given search params
-    if params[:search]
-      @puppies = Puppy.search(params[:search]).order("created_at DESC")
-    else
-      @puppies = Puppy.all.order('created_at DESC')
-    end
+    @puppies = if params[:search]
+                 Puppy.search(params[:search]).order('created_at DESC')
+               else
+                 Puppy.all.order('created_at DESC')
+               end
   end
 
   # GET /puppies/1
   # GET /puppies/1.json
-  def show
-  end
+  def show; end
 
   # GET /puppies/new
   def new
@@ -25,8 +25,7 @@ class PuppiesController < ApplicationController
   end
 
   # GET /puppies/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /puppies
   # POST /puppies.json
@@ -48,11 +47,11 @@ class PuppiesController < ApplicationController
   # for current_user
   def favorite
     type = params[:type]
-    if type == "favorite"
+    if type == 'favorite'
       current_user.favorites << @puppy
       redirect_to :back, notice: 'You favorited #{@puppy.name}'
 
-    elsif type == "unfavorite"
+    elsif type == 'unfavorite'
       current_user.favorites.delete(@puppy)
       redirect_to :back, notice: 'Unfavorited #{@puppy.name}'
 
@@ -87,13 +86,14 @@ class PuppiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_puppy
-      @puppy = Puppy.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def puppy_params
-      params.require(:puppy).permit(:image, :name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_puppy
+    @puppy = Puppy.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def puppy_params
+    params.require(:puppy).permit(:image, :name, :age, :breed, :size, :gender, :bio, :desexed, :vaccinated, :adoption_fee)
+  end
 end

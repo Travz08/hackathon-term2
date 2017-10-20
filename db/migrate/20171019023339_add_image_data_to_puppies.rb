@@ -1,3 +1,4 @@
+# Rubo cop needs a comment here
 class AddImageDataToPuppies < ActiveRecord::Migration[5.1]
   def change
     add_column :puppies, :image_data, :text
