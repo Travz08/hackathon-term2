@@ -54,13 +54,10 @@ continue until you have none left and integrate this into your regular test suit
 
   The TODO file then becomes exceptions in your code base that are very close to the Rubocop minimums that raises errors and you can adjust
 
-    Main problems we had was a lines too long, methods too long and blocks too long. For juniors this will improve as we get better at using less code to do more. With more efficient methods.
+  Main problems we had was a lines too long, methods too long and blocks too long. For juniors this will improve as we get better at using less code to do more. With more efficient methods.
 
 
 
-
-
-Ruby conventions such as [insert] were followed.
 
 ## Feature development and use of Ruby gems / APIs
 The following gems were used:
@@ -86,7 +83,15 @@ The following APIs were used:
 [to be inserted]
 
 ## Design & Planning
-We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD [Travis to insert]. Wireframes of the design are found here [James to insert].
+We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD .
+
+travz08 
+https://dbdesigner.net/designer/schema/120394
+
+ Wireframes of the design are found
+
+
+https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
 Our web application was deployed using Heroku, and can be found here [Travis to insert].
@@ -102,4 +107,8 @@ All team members worked together in order to resolve issues (discussed below).
 The key issue encountered by the team involved using Git. An early mistake was the creation of multiple, unnecessary branches despite having a small, agile team. This was done because it was believed that each branch should reflect a category of work (i.e. design, admin, user, and puppies), as well as master. Furthermore, one of the branches was unable to merge with any of the others as the history of the branches was radically different, and Github would not allow a merge.
 
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
-Other issues included [to be inserted].
+
+
+## Postgres vs Sqlite3
+A fun new challenge we found right before the deadline, is sqlite3 will let you search against booleans and integers using the same params as a regular string search.
+when we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value
