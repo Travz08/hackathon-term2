@@ -6,8 +6,10 @@ We were tasked with creating an online store (with one seller, multiple products
 
 ## Synopsis
 Our online store is a web app for a dog rescue shelter that allows them to post the dogs available for adoption, including information such as name, breed, age (determined by calculating current year minus year of birth), gender, whether the dog has been neutered and/or vaccinated, adoption fee etc. Each dog has its own profile with detailed information.
+
 A user can search key parameters when browsing the dogs available, including name, age, gender and breed. They can also login/sign up to save (i.e. favourite) the dogs they wish to view again. If there is a particular dog they are interested in adopting, they can message the rescue shelter via the website.
-The rescue shelter can login as admin and see the messages that users have sent about particular dogs, as well as see which dogs have been favourited the most.
+
+The rescue shelter can login as admin and see the messages that users have sent about particular dogs, as well as see which dogs have been favourited the most. Admin access is available upon request.
 
 ## Rails Conventions
 We used Robucop as a code analysis tool.
@@ -56,9 +58,6 @@ continue until you have none left and integrate this into your regular test suit
 
   Main problems we had was a lines too long, methods too long and blocks too long. For juniors this will improve as we get better at using less code to do more. With more efficient methods.
 
-
-
-
 ## Feature development and use of Ruby gems / APIs
 The following gems were used:
 ```
@@ -90,11 +89,10 @@ https://dbdesigner.net/designer/schema/120394
 
  Wireframes of the design are found
 
-
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
-Our web application was deployed using Heroku, and can be found here [Travis to insert].
+Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access is available upon request.
 
 ## Source Code Management
 
@@ -108,7 +106,7 @@ The key issue encountered by the team involved using Git. An early mistake was t
 
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
 
-
 ## Postgres vs Sqlite3
 A fun new challenge we found right before the deadline, is sqlite3 will let you search against booleans and integers using the same params as a regular string search.
-when we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value
+
+When we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value!
