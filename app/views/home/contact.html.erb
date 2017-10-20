@@ -5,5 +5,18 @@
   <p>At Pawesome, we are always happy to hear from you. Please use the form below to contact us.</p>
   <p>Alternatively, we can be found at 7 Kelly Street, Ultimo.</p>
   </div>
+  <%= form_with(model: @contact, method: :post) do |form|%>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :message %>
+  <%= form.text_area :message %>
+
+  <%= form.submit 'send message' %>
+  <% end %>
+
 </div>
 </div>

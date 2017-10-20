@@ -10,18 +10,78 @@ A user can search key parameters when browsing the dogs available, including nam
 The rescue shelter can login as admin and see the messages that users have sent about particular dogs, as well as see which dogs have been favourited the most.
 
 ## Rails Conventions
-We used Robucop as a code analysis tool. [James to explain.] Ruby conventions such as [insert] were followed.
+We used Robucop as a code analysis tool.
+To add Rubocop gem
+
+```
+$ gem install rubocop
+```
+This can be quite a daunting gem if done out of the blue, we initially got 229 offences.
+
+if you run with -a you can utilise the autocorrect from rubocop but it is experimental.
+
+Running with -a got us down to 90 offences
+You can then run
+```
+$ rubocop --auto-gen-config
+```
+and this will create .rubocop_todo.yml file which will help you config your robocop.
+
+ then run
+```
+$ rubocop --config .rubocop_todo.yml
+```
+and this will run the tests in your todo, they are all defaulted to false, and you can turn them on one by one to allow for easier management of violations.
+
+now make a blank file in your rails base directory
+```
+$ touch .rubocop.yml
+```
+
+Add the line
+```
+inherit_from: .rubocop_todo.yml
+```
+to the top of your .rubocop.yml file.
+
+
+The process is then to run
+```
+$ rubocop
+```
+and it will list errors, fix them, then clear that section of rubocop.yml and then enable the next section.
+continue until you have none left and integrate this into your regular test suite.
+
+  The TODO file then becomes exceptions in your code base that are very close to the Rubocop minimums that raises errors and you can adjust
+
+    Main problems we had was a lines too long, methods too long and blocks too long. For juniors this will improve as we get better at using less code to do more. With more efficient methods.
+
+
+
+
+
+Ruby conventions such as [insert] were followed.
 
 ## Feature development and use of Ruby gems / APIs
 The following gems were used:
-* Devise (~> 4.2): For Sign Up / Login / Logout
-* toastr-rails (~> 1.0): For changing alerts/success messages to pop ups
-* jquery-rails: For use with toastr-rails
-* geocoder: For setting location of the animal shelter
-* bootstrap (~> 4.0.0.beta): For CSS styling	
-* shrine: For image uploading (for dog pictures)
-* wdm (>= 0.1.0): For Windows users (sadface)
-
+```
+# For Sign Up / Login / Logout
+gem	'Devise' (~> 4.2)
+# For changing alerts/success messages to pop ups
+gem 'toastr-rails' (~> 1.0)
+# For use with toastr-rails
+gem 'jquery-rails'
+# For setting location of the animal shelter
+gem 'geocoder'
+# For CSS styling
+gem 'bootstrap' (~> 4.0.0.beta)
+# For image uploading (for dog pictures)
+gem 'shrine'
+# : For Windows users (sadface)
+* gem 'wdm' (>= 0.1.0)
+# For code analysis
+* gem 'Rubocop', require: false
+```
 The following APIs were used:
 [to be inserted]
 

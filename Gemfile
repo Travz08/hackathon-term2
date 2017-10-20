@@ -4,8 +4,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-# rubocop Force version because it's in beta
-gem 'rubocop', '~> 0.51.0', require: false
 
 # devise users
 gem 'devise', '~> 4.2'
@@ -13,6 +11,8 @@ gem 'devise', '~> 4.2'
 gem 'jquery-rails'
 # location
 gem 'geocoder'
+# dotenv
+gem 'dotenv-rails', groups: %i[development test]
 # css
 gem 'bootstrap', '~> 4.0.0.beta'
 # image uploader
@@ -56,6 +56,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # rubocop Force version because it's in beta
+  gem 'rubocop', '~> 0.51.0', require: false
 end
 
 group :development do
