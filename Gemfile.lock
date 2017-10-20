@@ -224,7 +224,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  devise
+  devise (~> 4.2)
   dotenv-rails
   geocoder
   jbuilder (~> 2.5)
