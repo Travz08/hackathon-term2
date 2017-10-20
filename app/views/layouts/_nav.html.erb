@@ -1,5 +1,5 @@
+<div class="container-fluid">
 <nav class="navbar sticky-top navbar-expand-lg navbar-default">
-  <div class="container-fluid">
   <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -20,8 +20,6 @@
         </div>
     <% else %>
       <ul class="navbar-nav ml-auto">
-
-        <li class= "nav-item"><%= link_to image_tag('heart.svg'), favorite_puppy_path(current_user) %></li>
         <!-- <li class= "nav-item"><%#= link_to image_tag('inbox.svg'), message_path %></li> -->
         <li class= "nav-item"><%= link_to image_tag('profile.svg'), edit_user_registration_path %></li>
         <li class= "nav-item"><%= link_to image_tag('logout.svg'), destroy_user_session_path, method: :delete %></li>
@@ -29,5 +27,5 @@
         </ul>
     <% end %>
   </div>
-</div>
 </nav>
+</div>
