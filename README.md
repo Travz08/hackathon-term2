@@ -79,7 +79,7 @@ gem 'shrine'
 * gem 'Rubocop', require: false
 ```
 The following APIs were used:
-[to be inserted]
+Google maps API.
 
 ## Design & Planning
 We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD, which is found here:
