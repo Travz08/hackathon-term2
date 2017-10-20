@@ -20,24 +20,26 @@
       </br>
     </div>
     <div class="row center">
-    <% @puppies.each do |puppy| %>
-      <div class="col-md-5">
-      <div class="card">
-      <%= link to image_tag('puppy.image_url'), puppy %>
-      <div class="card-body">
-        <h4 class="card-title center"><%= puppy.name %></h4>
-        <p class="text-black center">
-          Age: <%= puppy.age %>
-          </br>
-          Gender: <%= puppy.gender %>
-          </br>
-          Breed: <%= puppy.breed %>
-          </br></br>
-          <a href="#" class="btn center">ENQUIRE</a>
-          </br>
-      </div>
-      </div>
-      </div>
+    <% if @puppies.present? %>
+      <% @puppies.each do |puppy| %>
+        <div class="col-md-5">
+        <div class="card">
+        <%= link_to image_tag(puppy.image_url), puppy_path(puppy.id) %>
+        <div class="card-body">
+          <h4 class="card-title center"><%= puppy.name %></h4>
+          <p class="text-black center">
+            Age: <%= puppy.age %>
+            </br>
+            Gender: <%= puppy.gender %>
+            </br>
+            Breed: <%= puppy.breed %>
+            </br></br>
+            <a href="#" class="btn center">ENQUIRE</a>
+            </br>
+        </div>
+        </div>
+        </div>
+      <% end %>
     <% end %>
     </div>
 

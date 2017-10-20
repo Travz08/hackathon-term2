@@ -8,6 +8,8 @@ end
 gem 'devise'
 # location
 gem 'geocoder'
+# dotenv
+gem 'dotenv-rails', groups: [:development, :test]
 # css
 gem 'bootstrap', '~> 4.0.0.beta'
 # image uploader
