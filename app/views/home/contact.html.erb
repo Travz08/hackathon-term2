@@ -1,22 +1,22 @@
 <div class="row align-items-center">
-<div class="col-md-8 mx-auto">
-<h2 class="center">Contact</h2></br>
+<div class="col-md-10 mx-auto">
+<h2 class="center">CONTACT</h2></br>
   <div class="text-black center">
   <p>At Pawesome, we are always happy to hear from you. Please use the form below to contact us.</p>
-  <p>Alternatively, we can be found at 7 Kelly Street, Ultimo.</p>
-  </div>
+
   <%= form_with(model: @contact, method: :post) do |form|%>
-  <%= form.label :email %>
-  <%= form.text_field :email %>
-
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-
-  <%= form.label :message %>
-  <%= form.text_area :message %>
-
-  <%= form.submit 'send message' %>
+  <div class="form-group">
+  <%= form.text_field :name, placeholder: 'Name' %>
+  </div>
+  <div class="form-group">
+  <%= form.text_field :email, placeholder: 'Email' %>
+  </div>
+  <div class="form-group">
+  <%= form.text_area :message, placeholder: 'Enter message', class: 'forms' %>
+  </div>
+  <%= form.submit 'Submit', class: 'btn' %>
   <% end %>
-
+  <br><p>Alternatively, we can be found at 7 Kelly Street, Ultimo.</p></br>
+  </div>
 </div>
 </div>
