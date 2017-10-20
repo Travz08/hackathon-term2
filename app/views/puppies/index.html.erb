@@ -40,15 +40,12 @@
       </div>
       </div>
     <% end %>
-    </div>
-
+    <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
+  </div>
           <!-- <td><#%= link_to "favorite",   favorite_puppy_path(@puppy, type: "favorite"), method: :put %></td>
           <td><#%= link_to "unfavorite", favorite_puppy_path(@puppy, type: "unfavorite"), method: :put %></td> -->
           <%#= link_to 'Edit', edit_puppy_path(puppy) %>
           <%#= link_to 'Destroy', puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <br>
-
 </div>
 </div>
-
-<%= link_to 'New Puppy', new_puppy_path %>
+</div>
