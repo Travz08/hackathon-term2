@@ -62,9 +62,7 @@ class PuppiesController < ApplicationController
     end
   end
 
-  def enquire
-    @puppy = Puppy.find_by(params[:id])
-  end
+  def enquire; end
 
   def email
     email = current_user.email

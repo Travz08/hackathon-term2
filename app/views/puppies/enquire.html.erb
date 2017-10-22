@@ -1,6 +1,6 @@
 <div class="row align-items-center">
   <div class="col-md-10 mx-auto">
-    <h2 class="center">Enquire about <%= @puppy.name %></h2></br>
+    <h2 class="center">Want to adopt this pet?</h2></br>
     <div class="text-black center">
       <form class="form-horizontal">
         <%= form_with(model: @contact, method: :post) do |form|%>
@@ -14,7 +14,7 @@
         <div class="form-group">
         <%= form.text_area :message, placeholder: 'Enter message', class: 'forms' %>
         </div>
-        <%= form.submit 'Submit', method: :post, class: 'btn' %>
+        <%= form.submit 'Send Enquiry', method: :post, class: 'btn' %>
         <% end %>
       </form>
     </div>
