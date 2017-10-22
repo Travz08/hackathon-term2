@@ -11,7 +11,7 @@ A user can search key parameters when browsing the dogs available, including nam
 
 The rescue shelter can login as admin and see the messages that users have sent about particular dogs, as well as see which dogs have been favourited the most. Admin access is available upon request.
 
-## Rails Conventions
+## Configuration and Setup - Rails conventions
 We used Robucop as a code analysis tool. and Guard gem with live-reload for speedier refreshing
 To add Rubocop gem
 
@@ -129,6 +129,16 @@ end
 
 
 ```
+
+now run
+
+```
+$ bundle
+
+```
+## image optimiser
+We used optimizilla.com to make sure all our images were as small as possible.
+
 The following APIs were used:
 Google maps API on the Contact page.
 
@@ -145,7 +155,7 @@ Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
-Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access (to add, edit and delete available dogs) is available upon request. 
+Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access (to add, edit and delete available dogs) is available upon request.
 
 ## Source Code Management
 

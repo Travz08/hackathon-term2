@@ -41,7 +41,6 @@
 
 .banner-wrap {
   display:inline-block;
-  position:relative;
 }
 
 
@@ -49,6 +48,14 @@
   width: 80%;
   margin: 0 auto;
 }
+
+// about dogs
+.aboutdog{
+  height: auto;
+  width: 15em;
+}
+
+
 
 // Navbar
 
@@ -140,7 +147,6 @@ a:hover {
   background: #6B2A7E;
   padding: 10px 20px;
   text-decoration: none;
-  bottom: 50%;
-  left: 50%;
-
+  margin-left: 50%;
+  margin-top: -65%;
 }
