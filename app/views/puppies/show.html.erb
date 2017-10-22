@@ -1,55 +1,52 @@
 <div class="container">
-<div class="row center">
-<h2 class="center"> DOG PROFILE </h2>
-<br><div><%= image_tag @puppy.image_url, class: 'profile' %></div></br>
+  <div class="row center">
+    </br><div><%= image_tag @puppy.image_url, class: 'profile' %></div></br>
+  </div>
 </div>
-<div class="row center text-black">
-  <strong>Name:</strong>
+<section class="flex-wrapper">
+<div class="wrap_left">
+  <h1 class="puppyname">
   <%= @puppy.name %>
+  </h1>
+<div><p><%= @puppy.bio %></p></div>
+<h2>Adoption Details</h2>
+<div>
+<p>Please Contact: Pawesome through the link below </p>
+
+<%= button_to "ENQUIRE", enquire_path(@puppy.id), method: :get, class: "btn" %>
+
+<p>For more information about the Pawesome Adoption program visit <a target="_blank" href="https://github.com/Travz08/hackathon-term2">https://github.com/Travz08/hackathon-term2</a></p>
 </div>
-<div class="row center text-black">
-  <strong>Age: </strong>
-  <%= @puppy.age %></p>
 </div>
-<div class="row center text-black">
-  <strong>Breed:</strong>
-  <%= @puppy.breed %>
-</div>
-<div class="row center text-black">
-  <strong>Size:</strong>
-  <%= @puppy.size %>
-</div>
-<div class="row center text-black">
-  <strong>Gender:</strong>
-  <%= @puppy.gender %>
-</div>
-<div class="row center text-black">
-  <strong>Bio:</strong>
-  <%= @puppy.bio %>
-</div>
-<div class="row center text-black">
-  <strong>Desexed:</strong>
-  <%= @puppy.desexed %>
-</div>
-<div class="row center text-black">
-  <strong>Vaccinated:</strong>
-  <%= @puppy.vaccinated %>
-</div>
-<div class="row center text-black">
-  <strong>Adoption fee:</strong>
-  $<%= @puppy.adoption_fee %>
-</div>
-<div class="row center text-black">
-<%= link_to 'Back', puppies_path %>
-</div>
-<% if current_user.present? && current_user.email == 'admin@pawesome.com' %>
-    <div class="row center text-black">
-    <%= link_to 'Edit', edit_puppy_path(@puppy) %>
-    </div>
-    <div class="row center text-black">
-    <%= link_to 'Destroy', @puppy, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-<% else %>
-<% end %>
+<div class="wrap_right">
+<dl>
+<dt>Location:</dt>
+<dd>New South Wales</dd>
+</dl>
+
+<dl>
+<dt>Age:</dt>
+<dd><%= @puppy.age %></dd>
+<dt>Gender:</dt>
+<dd><%= @puppy.gender %></dd>
+<dt>Breed:</dt>
+<dd><%= @puppy.breed %></dd>
+<dt>Size:</dt>
+<dd><%= @puppy.size %></dd>
+<dt>Adoption fee:</dt>
+<dd>$<%= @puppy.adoption_fee %></dd>
+<dt>Desexed:</dt>
+<dd><% if @puppy.desexed == true %>Yes<% else %>No<% end %></dd>
+<dt>Vaccinated:</dt>
+<dd><% if @puppy.vaccinated == true %>Yes<% else %>No<% end %></dd>
+</dl>
 
 </div>
+</section>
+<%= link_to 'Back', puppies_path, class: "btn" %>
+
+<% if current_user.present? && current_user.email == 'admin@pawesome.com' %>
+    <%= link_to 'Edit', edit_puppy_path(@puppy), class: "btn" %>
+    <%= link_to 'Destroy', @puppy, method: :delete, class: "btn", data: { confirm: 'Are you sure?' } %>
+<% else %>
+<% end %>

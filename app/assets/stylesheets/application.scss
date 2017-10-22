@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "toastr";
 @import "home";
+@import "puppies";
 // General
 
 .center {
@@ -39,10 +40,17 @@
 }
 
 .profile {
+  border-radius: 15px;
   width: 80%;
   margin: 0 auto;
 }
 
+.profileindex {
+  border-radius: 15px;
+  width: 100%;
+  padding: 0 5px;
+  margin: 0 auto;
+}
 // Navbar
 
 .text-black {

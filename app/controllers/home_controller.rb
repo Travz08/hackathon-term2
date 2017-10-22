@@ -1,5 +1,6 @@
 # Rubo cop needs a comment here
 class HomeController < ApplicationController
+  before_action :authenticate_user!, only: [:contact]
   def index; end
 
   def favorite; end
@@ -9,7 +10,7 @@ class HomeController < ApplicationController
   end
 
   def email
-    email = params[:email]
+    email = current_user.email
     contact_name = params[:name]
     message = params[:message]
     ContactMailer.send_contact_email(email, contact_name, message).deliver_now
