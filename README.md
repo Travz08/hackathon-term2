@@ -11,7 +11,7 @@ A user can search key parameters when browsing the dogs available, including nam
 
 The rescue shelter can login as admin and see the messages that users have sent about particular dogs, as well as see which dogs have been favourited the most. Admin access is available upon request.
 
-## Rails Conventions
+## Configuration and Setup - Rails conventions
 We used Robucop as a code analysis tool. and Guard gem with live-reload for speedier refreshing
 To add Rubocop gem
 
@@ -129,6 +129,15 @@ end
 
 
 ```
+
+now run
+
+```
+$ bundle
+
+```
+
+
 The following APIs were used:
 Google maps API on the Contact page.
 
