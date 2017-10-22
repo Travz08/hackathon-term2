@@ -42,7 +42,7 @@
       </div>
     <% end %>
 
-    <% if current_user.email == 'admin@pawesome.com' %>
+    <% if current_user.present? && current_user.email == 'admin@pawesome.com' %>
         <div>
         <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
         </div>
