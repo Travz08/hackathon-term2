@@ -88,7 +88,7 @@ We created the following user stories using Trello.
 
 We used DBdesigner to create the below ERD:
 
-![alt text] (https://user-images.githubusercontent.com/30306087/31857436-55a45676-b72a-11e7-97c9-bd9c1ae5a56b.png)
+![alt text](https://user-images.githubusercontent.com/30306087/31857436-55a45676-b72a-11e7-97c9-bd9c1ae5a56b.png)
 
 Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
