@@ -58,11 +58,11 @@ continue until you have none left and integrate this into your regular test suit
 
   Main problems we had was a lines too long, methods too long and blocks too long. For juniors this will improve as we get better at using less code to do more. With more efficient methods.
 
-
 ## guard and guard-livereload
 
 Make sure you have guard installed follow instructions here : https://github.com/guard/guard
-i've summarised them here for you
+
+Instructions are summarised here for you:
 
 Add Guard (and any other dependencies) to a Gemfile in your project’s root:
 ```
@@ -78,8 +78,6 @@ Generate an empty Guardfile with:
 ```
 $ bundle exec guard init
 ```
-
-
 
 for guard live reload
 
@@ -98,12 +96,10 @@ Add guard definition to your Guardfile by running this command:
 $ guard init livereload
 ```  
 
-you will need the chrome extention for live reload found here : https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
-
-
+You will need the chrome extention for live reload, which is found here: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
 
 ## Feature development and use of Ruby gems / APIs
-The following gems were used: (this whole section can be copied to your gemfile )
+The following gems were used: (this whole section can be copied to your gemfile)
 ```
 # For Sign Up / Login / Logout
 gem	'Devise' (~> 4.2)
@@ -136,11 +132,12 @@ now run
 $ bundle
 
 ```
-## image optimiser
-We used optimizilla.com to make sure all our images were as small as possible.
 
 The following APIs were used:
 Google maps API on the Contact page.
+
+## Image optimiser
+We used optimizilla.com to make sure all our images were as small as possible.
 
 ## Design & Planning
 We created the following user stories using Trello.
@@ -162,20 +159,21 @@ Our web application was deployed using Heroku, and can be found here: http://paw
 A development environment was created for ensuring our team's MailGun username, password and domain are kept secret on Github.
 
 ## Issues Encountered
+
+### Git
 The key issue encountered by the team involved using Git. An early mistake was the creation of multiple, unnecessary branches despite having a small team. This was done because it was believed that each branch should reflect a category of work (i.e. design, admin, user, and puppies), as well as master. Furthermore, one of the branches was unable to merge with any of the others as the history of the branches was radically different, and Github would not allow a merge.
 
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
 
-## Postgres vs Sqlite3
+### Postgres vs Sqlite3
 A fun new challenge we found right before the deadline, is that sqlite3 will let you search against booleans and integers using the same params as a regular string search. However, when we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value!
+
+### Favourites
+Originally we sought to complete this by making a new controller that would receive a method - 'favourite or unfavorite" - in the view, which would be sent with a button. This was based on a stack overflow tutorial, which proved problematic. While the routes where correct, it wouldn't accept the button calls.
+
+We instead resorted to removing those and implementing a similar join table which checks a boolean against the button to see if something is true or not.
 
 ## Teamwork
 Tasks were divided into various categories and sub-categories. To begin with, they were divided by back-end (Travis & James) and front-end (Carmen). From there, a list was made of all the sub-categories (such as users, puppies, and admin), and individual tasks were assigned to each team member. For example, Travis was responsible for implementing the messaging system; James was responsible for the search functionality; and Carmen was responsible for overall design and UX/UI.
 
 All team members worked together in order to resolve the issues above.
-
-
-## Favourites :
-Originally we sought to complete this by making a new controller that would receive a method - 'favourite or unfavorite"- in the view which be send with a button . This was based on a stack overflow tutorial and proved problematic. Where the routes while correct wouldn't accept the button calls
-
-We instead resorted in yanking those out and implementing a similar join table which checks a boolean against the button if something is true or not.
