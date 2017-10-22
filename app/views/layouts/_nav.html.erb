@@ -1,31 +1,46 @@
 <div class="container-fluid">
-<nav class="navbar sticky-top navbar-expand-lg navbar-default">
-  <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<nav class="navbar sticky-top navbar-expand-md navbar-default">
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto">
-      <li class= "nav-item"><%= link_to "About", about_path, class: 'text-black nav-link' %></li>
-      <li class= "nav-item"><%= link_to "Browse Dogs", puppies_path, class: 'text-black nav-link' %></li>
-      <li class= "nav-item"><%= link_to "Contact", contact_path, class: 'text-black nav-link' %></li>
-    </ul>
-    <% if (!user_signed_in?) %>
-      <ul class="navbar-nav ml-auto">
-        <div>
-        <%= link_to "Login", new_user_session_path, class: 'text-black' %> /
-        <%= link_to "Sign Up", new_user_registration_path, class: 'text-black' %>
-        </ul>
-        </div>
-    <% else %>
-      <ul class="navbar-nav ml-auto">
-        <!-- <li class= "nav-item"><%#= link_to image_tag('inbox.svg'), message_path %></li> -->
-        <li class= "nav-item"><%= link_to image_tag('profile.svg'), edit_user_registration_path %></li>
-        <li class= "nav-item"><%= link_to image_tag('logout.svg'), destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </ul>
-    <% end %>
-  </div>
-</nav>
+		<!--Holds logo and menu button  -->
+		<div class="navrow">
+			<!-- main logo  -->
+			<%= link_to image_tag('logo.png', class: "logo"), root_path %>
+
+			<!-- Menu button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+				<span class="glyphicon btnnav btn-sm">Menu</span>
+			</button>
+		</div>
+
+		<!--Menu items  -->
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+
+				<!--About  -->
+				<li class="nav-item navtext text-center"><%= link_to "About", about_path, class: 'text-black nav-link' %></li>
+
+				<!--Browse Dogs  -->
+				<li class="nav-item navtext text-center"><%= link_to "Browse Dogs", puppies_path, class: 'text-black nav-link' %></li>
+
+				<!--Contact us  -->
+				<li class="nav-item navtext text-center"><%= link_to "Contact Us", contact_path, class: 'text-black nav-link text-center' %></li>
+
+				<!-- if they aren't signed in show signin and register  -->
+				<% if (!user_signed_in?) %>
+
+				<li class="nav-item navtext text-center"><%= link_to "Login", new_user_session_path, class: 'text-black nav-link' %></li>
+
+				<li class="nav-item navtext text-center"><%= link_to "Register", new_user_registration_path, class: 'text-black nav-link' %></li>
+
+			<% else %>
+				<!-- If they are show profile and Signout  -->
+				<!--profile  -->
+				<li class="nav-item"><%= link_to image_tag('profile.svg'), edit_user_registration_path , class: 'text-black text-center nav-link' %></li>
+				<!--Signout  -->
+				<li class="nav-item"><%= link_to image_tag('logout.svg'), destroy_user_session_path, method: :delete, class: 'text-black text-center nav-link' %></li>
+
+			</ul>
+			<% end %>
+		</div>
+	</nav>
 </div>

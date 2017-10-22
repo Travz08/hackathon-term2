@@ -20,7 +20,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 # image uploader
 gem 'shrine'
 # cloud for our shrine images(Deployment)
-gem "shrine-cloudinary"
+gem 'shrine-cloudinary'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
@@ -60,6 +60,9 @@ group :development, :test do
   gem 'sqlite3'
   # rubocop Force version because it's in beta
   gem 'rubocop', '~> 0.51.0', require: false
+  gem 'guard-livereload', '~> 2.5', require: false
+
+
 end
 
 group :development do

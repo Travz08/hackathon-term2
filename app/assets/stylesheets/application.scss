@@ -4,6 +4,13 @@
 @import "puppies";
 // General
 
+
+//  Testing
+// * {
+//   border: 2px solid black;
+// }
+
+
 .center {
   text-align: center;
   justify-content: center;
@@ -26,18 +33,17 @@
   margin: 0 auto;
 }
 
-.logo {
-  width: 10%;
+
+.favourite {
+  width: 3em;
+  height: auto;
 }
+
 
 .banner-wrap {
   display:inline-block;
-  position:relative;
 }
 
-.logo {
-  width: 90%;
-}
 
 .profile {
   border-radius: 15px;
@@ -51,8 +57,14 @@
   padding: 0 5px;
   margin: 0 auto;
 }
-// Navbar
 
+// about dogs
+.aboutdog{
+  height: auto;
+  width: 15em;
+}
+
+// Navbar
 .text-black {
   font-family: 'Didact Gothic', sans-serif;
   color: #000;
@@ -63,6 +75,40 @@
   background-color: white;
   color: black;
 }
+
+
+// control size of menu and logo
+
+// small screen shrinks the logo size a lot
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 50%;
+  }
+}
+
+//  Controls the menu button and logo size
+@media screen and (max-width: 934px) {
+  .logo {
+    width: 55%;
+  }
+
+  .btnnav {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #ffffff;
+    font-size: .7em;
+    background: #6B2A7E;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+  .navtext {
+    font-size: .8em;
+  }
+
+}
+
+
+
 
 // Text
 
@@ -98,14 +144,15 @@ a:hover {
   cursor: pointer; cursor: hand;
 }
 
+
+//  Browse dogs button on main page
 .btn-browse {
   font-family: 'Didact Gothic', sans-serif;
   color: #ffffff;
-  font-size: 2vw;
+  font-size: 4vw;
   background: #6B2A7E;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   text-decoration: none;
-  position: absolute;
-  bottom: 60px;
-  right: 200px;
+  margin-left: 50%;
+  margin-top: -65%;
 }
