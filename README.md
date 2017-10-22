@@ -136,7 +136,8 @@ now run
 $ bundle
 
 ```
-
+## image optimiser
+We used optimizilla.com to make sure all our images were as small as possible.
 
 The following APIs were used:
 Google maps API on the Contact page.
@@ -154,7 +155,7 @@ Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
-Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access (to add, edit and delete available dogs) is available upon request. 
+Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access (to add, edit and delete available dogs) is available upon request.
 
 ## Source Code Management
 
