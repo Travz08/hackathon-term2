@@ -15,27 +15,6 @@
 		</div>
 	</div>
 
-	<div class="col-md-9">
-		<div class="row center">
-			<p>
-				<h2>AVAILABLE DOGS</h2>
-			</p>
-		</br>
-	</div>
-	<div class="row center">
-		<% @puppies.each do |puppy| %>
-		<div class="col-md-6">
-			<div class="card"></br>
-			<!-- Dog image   -->
-			<%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
-
-			<!--  favourite paw  -->
-			 <!-- if current_user %>
-			< link_to image_tag("whitepaw.jpg"), favorite_puppy_path(puppy, type: "favorite"), method: :put, class: "logo" %>
-      <!- unfavorite -->
-			<!-- < link_to image_tag("blackpaw.jpg"), favorite_puppy_path(puppy, type: "unfavorite"), method: :patch, class: "logo"%>
-			< end %> --> -->
-
 <div class="col-md-9">
     <div class="row center">
       <p><h2>AVAILABLE DOGS</h2></p>
@@ -70,7 +49,7 @@
     <% else %>
     <% end %>
   </div>
-         
+
 </div>
 </div>
 </div>
