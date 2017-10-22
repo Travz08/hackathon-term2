@@ -7,10 +7,10 @@
 			</br>
 		</div>
 		<div class="row center">
-			<!--Breed Tag  -->
+			<!--Search box -->
 			<%= form_tag(puppies_path, :method => "get") do %>
 			<br><%= text_field_tag :search, params[:search], placeholder: "      Find a Pawmate"%></br>
-			<br><%= submit_tag "SEARCH", class: 'btn' %></br>
+			<br><%= submit_tag "FETCH", class: 'btn' %></br>
 			<% end %>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
           </br>
           Breed: <%= puppy.breed %>
           </br></br>
-          <a href="#" class="btn center">ENQUIRE</a>
+          <%= link_to "More Info", puppy_path(puppy.id), class: "btn center"%>
           </br>
       </div>
       </div>
