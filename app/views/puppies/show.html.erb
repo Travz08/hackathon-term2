@@ -1,8 +1,7 @@
 <div class="container">
 <div class="row center">
 <h2 class="center"> DOG PROFILE </h2>
-<div><%= image_tag @puppy.image_url, class: 'profile' %></div>
-</br>
+<br><div><%= image_tag @puppy.image_url, class: 'profile' %></div></br>
 </div>
 <div class="row center text-black">
   <strong>Name:</strong>
@@ -43,7 +42,7 @@
 <div class="row center text-black">
 <%= link_to 'Back', puppies_path %>
 </div>
-<% if current_user.email == 'admin@pawesome.com' %>
+<% if current_user.present? && current_user.email == 'admin@pawesome.com' %>
     <div class="row center text-black">
     <%= link_to 'Edit', edit_puppy_path(@puppy) %>
     </div>

@@ -79,14 +79,18 @@ gem 'shrine'
 * gem 'Rubocop', require: false
 ```
 The following APIs were used:
-[to be inserted]
+Google maps API.
 
 ## Design & Planning
-We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD, which is found here:
-https://dbdesigner.net/designer/schema/120394
+We created the following user stories using Trello.
 
- Wireframes of the design are found here:
+![alt text](https://user-images.githubusercontent.com/30306087/31857425-fa6491e0-b729-11e7-9ac6-2b3ab51519da.png)
 
+We used DBdesigner to create the below ERD:
+
+![alt text](https://user-images.githubusercontent.com/30306087/31857436-55a45676-b72a-11e7-97c9-bd9c1ae5a56b.png)
+
+Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
@@ -94,10 +98,7 @@ Our web application was deployed using Heroku, and can be found here: http://paw
 
 ## Source Code Management
 
-## Teamwork
-Tasks were divided into various categories and sub-categories. To begin with, they were divided by back-end (Travis & James) and front-end (Carmen). From there, a list was made of all the sub-categories (such as users, puppies, and admin), and individual tasks were assigned to each team member. For example, Travis was responsible for implementing the messaging system; James was responsible for the search functionality; and Carmen was responsible for overall design and UX/UI.
-
-All team members worked together in order to resolve issues (discussed below).
+See issues encountered below.
 
 ## Issues Encountered
 The key issue encountered by the team involved using Git. An early mistake was the creation of multiple, unnecessary branches despite having a small, agile team. This was done because it was believed that each branch should reflect a category of work (i.e. design, admin, user, and puppies), as well as master. Furthermore, one of the branches was unable to merge with any of the others as the history of the branches was radically different, and Github would not allow a merge.
@@ -105,6 +106,9 @@ The key issue encountered by the team involved using Git. An early mistake was t
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
 
 ## Postgres vs Sqlite3
-A fun new challenge we found right before the deadline, is sqlite3 will let you search against booleans and integers using the same params as a regular string search.
+A fun new challenge we found right before the deadline, is that sqlite3 will let you search against booleans and integers using the same params as a regular string search. However, when we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value!
 
-When we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value!
+## Teamwork
+Tasks were divided into various categories and sub-categories. To begin with, they were divided by back-end (Travis & James) and front-end (Carmen). From there, a list was made of all the sub-categories (such as users, puppies, and admin), and individual tasks were assigned to each team member. For example, Travis was responsible for implementing the messaging system; James was responsible for the search functionality; and Carmen was responsible for overall design and UX/UI.
+
+All team members worked together in order to resolve the issues above.

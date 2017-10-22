@@ -14,12 +14,6 @@
 			<% end %>
 		</div>
 	</div>
-			<!--  favourite paw  -->
-			 <!-- if current_user %>
-			< link_to image_tag("whitepaw.jpg"), favorite_puppy_path(puppy, type: "favorite"), method: :put, class: "logo" %>
-      <!- unfavorite -->
-			<!-- < link_to image_tag("blackpaw.jpg"), favorite_puppy_path(puppy, type: "unfavorite"), method: :patch, class: "logo"%>
-			< end %> -->
 
 <div class="col-md-9">
     <div class="row center">
@@ -48,7 +42,7 @@
       </div>
     <% end %>
 
-    <% if current_user.email == 'admin@pawesome.com' %>
+    <% if current_user.present? && current_user.email == 'admin@pawesome.com' %>
         <div>
         <%= link_to 'New Puppy', new_puppy_path, class: 'btn center' %>
         </div>
