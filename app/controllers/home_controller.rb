@@ -4,7 +4,9 @@ class HomeController < ApplicationController
 
   def favorite; end
 
-  def contact; end
+  def contact
+    @location = Location.new(id: 1, address: "7 kelly street", city: "sydney", postcode: "2007", country: "Australia", latitude: -33.881959, longitude: 151.195238, user_id: 1)
+  end
 
   def email
     email = params[:email]
