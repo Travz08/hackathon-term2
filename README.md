@@ -82,11 +82,14 @@ The following APIs were used:
 Google maps API.
 
 ## Design & Planning
-We created user stories using Trello (available upon request, as we need to authorise viewers), and used DBdesigner to create an ERD, which is found here:
-https://dbdesigner.net/designer/schema/120394
+We created the following user stories using Trello.
 
- Wireframes of the design are found here:
+![alt text](https://user-images.githubusercontent.com/30306087/31857425-fa6491e0-b729-11e7-9ac6-2b3ab51519da.png)
 
+We used DBdesigner to create the below ERD:
+
+
+Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
