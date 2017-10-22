@@ -112,7 +112,7 @@ gem 'geocoder'
 # For CSS styling
 gem 'bootstrap' (~> 4.0.0.beta)
 # For image uploading (for dog pictures)
-gem 'shrine'
+gem 'shrine' & gem 'shrine-cloudinary'
 # : For Windows users (sadface)
 gem 'wdm' (>= 0.1.0)
 
@@ -165,7 +165,15 @@ The key issue encountered by the team involved using Git. An early mistake was t
 
 The solution was to create only one branch for each team member, and for that team member to constantly push to their branch, submit a pull request, and for all conflicts to be resolved and the work pushed to master, which would then be pulled by the other team members.
 
-### Postgres vs Sqlite3
+Another issue we encountered was the uploading of images when deployed to heroku. In development, images were being stored in files when uploaded locally, whereas when deployed images needed a cloud to be stored into.
+
+The solution to this was to use the cloud based image management gem 'shrine-cloudinary'. This enabled us to upload, store, manage, manipulate and deliver images to our site.
+
+We also originally wanted to utilise the gem 'geocoder' to display a map locating our adoption center. The gem, however, required a form to be filled out in order to retrieve the latitude and longitude values.
+
+The solution to this was to manually input the values within the associated controller.
+
+## Postgres vs Sqlite3
 A fun new challenge we found right before the deadline, is that sqlite3 will let you search against booleans and integers using the same params as a regular string search. However, when we swapped to PG for heroku deployment, our entire search function errored out with each search, and with only cryptic messages to help us debunk the problems. Trial and error proved best value!
 
 ### Favourites
@@ -174,6 +182,6 @@ Originally we sought to complete this by making a new controller that would rece
 We instead resorted to removing those and implementing a similar join table which checks a boolean against the button to see if something is true or not.
 
 ## Teamwork
-Tasks were divided into various categories and sub-categories. To begin with, they were divided by back-end (Travis & James) and front-end (Carmen). From there, a list was made of all the sub-categories (such as users, puppies, and admin), and individual tasks were assigned to each team member. For example, Travis was responsible for implementing the messaging system; James was responsible for the search functionality; and Carmen was responsible for overall design and UX/UI.
+Tasks were divided into various categories and sub-categories. To begin with, they were divided by back-end (Travis & James) and front-end (Carmen). From there, a list was made of all the sub-categories (such as users, puppies, and admin), and individual tasks were assigned to each team member. For example, Travis was responsible for implementing the mailing system; James was responsible for the search functionality; and Carmen was responsible for overall design and UX/UI.
 
 All team members worked together in order to resolve the issues above.

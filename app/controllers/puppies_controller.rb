@@ -1,5 +1,6 @@
 # This takes care of our puppies project
 class PuppiesController < ApplicationController
+  before_action :authenticate_user!, only: [:enquire]
   before_action :set_puppy, only: %i[show edit update destroy]
 
   # GET /puppies
@@ -59,6 +60,16 @@ class PuppiesController < ApplicationController
       # Type missing, nothing happens
       redirect_to :back, notice: 'Nothing happened.'
     end
+  end
+
+  def enquire; end
+
+  def email
+    email = current_user.email
+    contact_name = params[:name]
+    message = params[:message]
+    ContactMailer.send_contact_email(email, contact_name, message).deliver_now
+    redirect_to root_path
   end
 
   # PATCH/PUT /puppies/1

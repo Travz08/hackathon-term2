@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "toastr";
 @import "home";
+@import "puppies";
 // General
 
 
@@ -45,7 +46,15 @@
 
 
 .profile {
+  border-radius: 15px;
   width: 80%;
+  margin: 0 auto;
+}
+
+.profileindex {
+  border-radius: 15px;
+  width: 100%;
+  padding: 0 5px;
   margin: 0 auto;
 }
 
@@ -55,10 +64,7 @@
   width: 15em;
 }
 
-
-
 // Navbar
-
 .text-black {
   font-family: 'Didact Gothic', sans-serif;
   color: #000;

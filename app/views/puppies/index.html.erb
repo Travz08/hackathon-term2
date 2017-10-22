@@ -25,7 +25,7 @@
       <div class="col-md-6">
       <div class="card">
       </br>
-      <%= link_to image_tag(puppy.image_url, class: 'profile'), puppy_path(puppy.id) %>
+      <%= link_to image_tag(puppy.image_url, class: 'profileindex'), puppy_path(puppy.id) %>
       <div class="card-body">
         <h4 class="card-title center"><%= puppy.name %></h4>
         <p class="text-black center">
@@ -35,7 +35,7 @@
           </br>
           Breed: <%= puppy.breed %>
           </br></br>
-          <%= link_to "More Info", puppy_path(puppy.id), class: "btn center"%>
+          <%= link_to "ENQUIRE", enquire_path, class: "btn center" %>
           </br>
       </div>
       </div>
