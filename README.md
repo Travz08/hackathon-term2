@@ -79,7 +79,7 @@ gem 'shrine'
 * gem 'Rubocop', require: false
 ```
 The following APIs were used:
-Google maps API.
+Google maps API on the Contact page.
 
 ## Design & Planning
 We created the following user stories using Trello.
@@ -94,11 +94,11 @@ Wireframes of the design are found here:
 https://www.figma.com/file/V8bdWj5CHC5O9nt57Jeox3Uo/Pawsome
 
 ## Deployment
-Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access is available upon request.
+Our web application was deployed using Heroku, and can be found here: http://pawesome.herokuapp.com/. Admin access (to add, edit and delete available dogs) is available upon request. 
 
 ## Source Code Management
 
-See issues encountered below.
+A development environment was created for ensuring our team's MailGun username, password and domain are kept secret on Github.
 
 ## Issues Encountered
 The key issue encountered by the team involved using Git. An early mistake was the creation of multiple, unnecessary branches despite having a small, agile team. This was done because it was believed that each branch should reflect a category of work (i.e. design, admin, user, and puppies), as well as master. Furthermore, one of the branches was unable to merge with any of the others as the history of the branches was radically different, and Github would not allow a merge.
